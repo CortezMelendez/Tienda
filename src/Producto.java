@@ -19,8 +19,9 @@ public class Producto {
         System.out.println("Valor total del Inventario: "+inv);
     }
     public double aplicarDescuento(double descuento){
+        descuento = descuento/100;
          double precio1 = precio - (precio*descuento);
-        System.out.println("Precio con descuento aplicado: "+precio);
+        System.out.println("Precio con descuento aplicado: "+precio1);
         return precio1;
     }
 
