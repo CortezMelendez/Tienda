@@ -2,7 +2,6 @@ public class Producto {
     String nombre;
     double precio;
     int stock;
-    double descuento;
 
     public Producto(String nombre, Double precio, int stock) {
         this.nombre = nombre;
@@ -19,8 +18,10 @@ public class Producto {
         double inv = stock*precio;
         System.out.println("Valor total del Inventario: "+inv);
     }
-    public void aplicarDescuento(Double descuento){
-
+    public double aplicarDescuento(double descuento){
+         double precio1 = precio - (precio*descuento);
+        System.out.println("Precio con descuento aplicado: "+precio);
+        return precio1;
     }
 
     public void hayDisponibilidad(){
